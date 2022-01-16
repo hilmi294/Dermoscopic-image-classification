@@ -9,14 +9,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style type="text/css">
     body{
-      background-color: blanchedalmond;
+      background-color: rgb(137, 211, 157);
     }
   </style>
 </head>
 <body>
-
+  <div class="jumbotron">
+    <div class="container">
+      <h1 align="center">Dermoscopic image classification melanoma dan nevus</h1>
+    </div>
+  </div>
 <div class="container">
-  <h1 class="jumbotron bg-primary">Dermoscopic image classification melanoma dan nevus</h1>
+  <p align="center">Tahi lalat yang berpotensi kanker serta tahi lalat yang tidak berpotensi kanker mempunyai tampilan yang sangat mirip. Hingga dari itu, dermatoskop sangatlah diperlukan buat menolong membedakan keduanya.</p>
+  <p align="center">Kamu juga tidak butuh takut hendak rasa sakit dikala pengecekan, karena prosedur dermoscopy tidak mengaitkan operasi ataupun pengambilan ilustrasi semacam biopsi.</p>
+  <p align="center">Tidak hanya mengetahui ciri kanker kulit melanoma, prosedur ini pula bisa menolong dalam penaksiran penyakit kulit yang lain, semacam nevus.</p>
   <br><br>
   <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
 
@@ -36,7 +42,7 @@
 
 	{% if prediction %}
   <img src="{{img_path}}" height="400px" width="400px">
-	<h2> Diagnosis kangker kulit   : <i> {{prediction}} </i></h2>
+	<h2> Diagnosis   : <i> {{prediction}} </i></h2>
 
 	{% endif %}
 
